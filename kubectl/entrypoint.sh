@@ -6,7 +6,4 @@ set -e
 echo "$KUBE_CONFIG_DATA" | base64 --decode > /tmp/config
 export KUBECONFIG=/tmp/config
 
-pwd
-cat /k8s/config-dev.yaml
-
 sh -c "kubectl $*"
