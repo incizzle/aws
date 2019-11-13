@@ -24,6 +24,9 @@ RUN apt-get update && \
                  -C /usr/local/bin docker/docker && \
   rm docker-${DOCKERVERSION}.tgz && \
   rm -rf /var/lib/apt/lists/* && \
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl \
+  chmod +x ./kubectl \
+  sudo mv ./kubectl /usr/local/bin/kubectl \
   pip install --upgrade pip && \
   pip install setuptools awscli
 
