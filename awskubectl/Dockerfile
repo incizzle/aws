@@ -27,8 +27,8 @@ RUN apt-get update && \
   pip install --upgrade pip && \
   pip install setuptools awscli
 
-RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl \
-  chmod +x ./kubectl \
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl && \
+  chmod +x ./kubectl && \
   sudo mv ./kubectl /usr/local/bin/kubectl 
 
 COPY "entrypoint.sh" "/entrypoint.sh"
