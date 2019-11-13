@@ -29,7 +29,7 @@ RUN apt-get update && \
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl && \
   chmod +x ./kubectl && \
-  sudo mv ./kubectl /usr/local/bin/kubectl 
+  mv ./kubectl /usr/local/bin/kubectl 
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
