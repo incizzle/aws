@@ -26,7 +26,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/* && \
   pip install --upgrade pip && \
   pip install setuptools awscli && \
-  apt-get -y install gettext-base
+  apt-get -y install gettext
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl && \
   chmod +x ./kubectl && \
