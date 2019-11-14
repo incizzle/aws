@@ -10,4 +10,4 @@ set -e
 
 # Capture output
 sh -c "aws eks update-kubeconfig --name ${AWS_EKS_CLUSTER}"
-sh -c "kubectl $*"
+sh -c "$*"
